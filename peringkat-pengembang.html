@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f4faff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com">
+</script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed": "#001c38", "error-container": "#ffdad6", "secondary-fixed-dim": "#e8c41d", "outline": "#707783", "surface-container": "#e3f0f8", "surface-container-high": "#ddeaf2", "on-tertiary-fixed-variant": "#6d3a00", "on-error": "#ffffff", "on-secondary-fixed-variant": "#544600", "outline-variant": "#c0c7d4", "on-tertiary-container": "#fffbff", "surface-tint": "#0060a8", "on-primary-fixed-variant": "#004881", "on-primary-container": "#fdfcff", "surface-container-lowest": "#ffffff", "background": "#f4faff", "inverse-surface": "#263238", "on-secondary-fixed": "#221b00", "inverse-primary": "#a2c9ff", "tertiary-fixed": "#ffdcc2", "surface-variant": "#d7e4ec", "secondary-fixed": "#ffe16e", "primary-container": "#0077ce", "on-surface": "#111d23", "tertiary": "#8c4c00", "surface": "#f4faff", "primary-fixed": "#d3e4ff", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ffb77b", "secondary": "#705d00", "error": "#ba1a1a", "surface-container-highest": "#d7e4ec", "surface-dim": "#cfdce4", "surface-bright": "#f4faff", "on-secondary-container": "#705e00", "inverse-on-surface": "#e6f3fb", "primary-fixed-dim": "#a2c9ff", "tertiary-container": "#b06000", "secondary-container": "#fdd835", "on-secondary": "#ffffff", "on-tertiary-fixed": "#2e1500", "on-surface-variant": "#404752", "on-background": "#111d23", "surface-container-low": "#e9f6fd", "primary": "#005ea4", "on-primary": "#ffffff", "on-tertiary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-md": "1rem" }, fontFamily: { "label-lg": ["Times New Roman"], "label-sm": ["Times New Roman"], "headline-lg": ["Times New Roman"], "title-md": ["Times New Roman"], "headline-xl-mobile": ["Times New Roman"], "label-md": ["Times New Roman"], "headline-sm": ["Times New Roman"], "body-md": ["Times New Roman"], "body-sm": ["Times New Roman"], "headline-xl": ["Times New Roman"], "headline-lg-mobile": ["Times New Roman"], "body-lg": ["Times New Roman"], "headline-md": ["Times New Roman"] }, fontSize: { "label-lg": ["16px", { lineHeight: "20px", fontWeight: "700" }], "label-sm": ["12px", { lineHeight: "16px", fontWeight: "700" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "title-md": ["18px", { lineHeight: "24px", fontWeight: "700" }], "headline-xl-mobile": ["30px", { lineHeight: "36px", fontWeight: "700" }], "label-md": ["14px", { lineHeight: "18px", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "700" }], "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-xl": ["40px", { lineHeight: "48px", fontWeight: "700" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "700" }] } } } };</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img alt="Logo Petualangan Bahasa PKBM Hasanah Marzuki" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/d/1XoK-zZq1rYh_7Y1L1L_7L1L1L1L1L1L1" onerror="this.style.display='none'"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary tracking-wide truncate">PKBM Hasanah Marzuki</span>
+<h1 class="font-title-md text-title-md text-on-surface truncate">Papan Peringkat</h1>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full shadow-[0_2px_4px_rgba(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">stars</span>
+<span class="font-label-md text-label-md text-on-surface">1.250</span>
+</div>
+<button aria-label="Suara Game" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-high text-primary hover:bg-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen px-margin-mobile">
+<div class="flex flex-col w-full pb-8 space-y-4">
+<!-- Navigasi Cepat Balik Menu -->
+<div class="flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 px-3 py-2 bg-surface-container rounded-xl text-primary font-label-md text-label-md shadow-sm active:scale-95 transition-all" href="dashboard.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Menu Utama</span>
+</a>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim animate-pulse">
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">save</span> LocalStorage Aktif
+      </span>
+</div>
+</div>
+<!-- Tab Switcher Keren & Tactile -->
+<div class="grid grid-cols-2 p-1.5 bg-surface-container-high rounded-2xl gap-2 shadow-sm">
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md transition-all duration-200" id="btn-tab-leaderboard" onclick="switchTab('leaderboard')">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span>Papan Juara</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all duration-200" id="btn-tab-developer" onclick="switchTab('developer')">
+<span class="material-symbols-outlined text-[20px]">person_pin</span>
+<span>Pengembang</span>
+</button>
+</div>
+<!-- TAB KONTEN 1: PAPAN PERINGKAT -->
+<div class="flex flex-col space-y-4" id="section-leaderboard">
+<!-- Filter Waktu & Status Sinkronisasi -->
+<div class="flex items-center justify-between bg-surface-container p-3 rounded-2xl shadow-sm">
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-transform active:scale-95" id="btn-filter-all" onclick="filterTime('all')">
+          Semua Waktu
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all" id="btn-filter-week" onclick="filterTime('week')">
+          Minggu Ini
+        </button>
+</div>
+<div class="text-right">
+<span class="text-secondary-fixed-dim material-symbols-outlined text-[18px] align-middle">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Terverifikasi</span>
+</div>
+</div>
+<!-- Podium Juara Top 3 Interaktif -->
+<div class="relative bg-gradient-to-b from-surface-container-low to-surface-container-highest p-4 rounded-3xl shadow-md overflow-hidden">
+<!-- Ornamen Dekoratif Latar -->
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-secondary-fixed/20 pointer-events-none">
+</div>
+<div class="absolute -bottom-8 -left-8 w-28 h-28 rounded-full bg-primary-fixed/30 pointer-events-none">
+</div>
+<div class="relative text-center mb-3">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Penjelajah Aksara Terbaik</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Podium Juara Nusantara</h2>
+</div>
+<div class="grid grid-cols-3 gap-2 items-end pt-3 pb-1" id="podiumGrid">
+<!-- Diisi dari LocalStorage oleh JavaScript -->
+</div>
+</div>
+<!-- Peringkat Pengguna Aktif (Floating Sticky-Style Highlight) -->
+<div class="bg-primary text-on-primary p-3.5 rounded-2xl shadow-lg flex items-center justify-between relative overflow-hidden" id="playerCard">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center font-headline-sm text-headline-sm text-on-primary-container shrink-0" id="playerRank">
+          -
+        </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-label-md text-label-md truncate" id="playerName">Siswa</h3>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-1.5 py-0.5 rounded-full uppercase">Kamu</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed truncate" id="playerSchool">PKBM Hasanah Marzuki</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="flex items-center justify-end gap-1 text-secondary-container font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[18px]">stars</span>
+<span id="player-score-display">0</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed">Nilai Terbaik</span>
+</div>
+</div>
+<!-- Kartu Daftar Peringkat Kelas Paket B -->
+<div class="bg-surface-container-lowest p-4 rounded-3xl shadow-sm space-y-3">
+<div class="flex items-center justify-between pb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Daftar Peringkat Belajar</h3>
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-1 hover:underline" onclick="refreshLeaderboard()">
+<span class="material-symbols-outlined text-[16px]">sync</span> Perbarui
+        </button>
+</div>
+<!-- Tabel/List Ranking -->
+<div class="space-y-2" id="leaderboard-list">
+<!-- Diisi dari LocalStorage oleh JavaScript -->
+</div>
+<!-- Quick Action: Tambah / Uji Skor Sendiri (LocalStorage Mock) -->
+<div class="pt-2">
+<button class="w-full py-2.5 px-4 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:translate-y-0.5 transition-all" onclick="window.location.href='bermain.html'">
+<span class="material-symbols-outlined text-[18px]">sports_esports</span>
+<span>Mainkan Kuis untuk Naik Peringkat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TAB KONTEN 2: PROFIL PENGEMBANG & LEMBAGA -->
+<div class="hidden flex-col space-y-4" id="section-developer">
+<!-- Profil Pengembang Card -->
+<div class="bg-surface-container-lowest p-5 rounded-3xl shadow-md space-y-4">
+<div class="flex items-start gap-4">
+<!-- Frame Avatar Pengembang -->
+<div class="relative shrink-0">
+<div class="w-20 h-20 rounded-2xl bg-primary-fixed p-1 shadow-md">
+<img class="w-full h-full rounded-xl object-cover" alt="Foto Pengembang" id="fotoPengembang" src="pengembang.png" onerror="tampilkanAvatarPengembang()"/>
+</div>
+<span class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container p-1 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px]">school</span>
+</span>
+</div>
+<div class="min-w-0">
+<span class="inline-block px-2 py-0.5 bg-surface-container text-primary font-label-sm text-label-sm rounded-md mb-1">
+            Pengembang Media Pembelajaran
+          </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Mardiah</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kepala PKBM Hasanah Marzuki</p>
+<p class="font-label-sm text-label-sm text-tertiary mt-1">PKBM Hasanah Marzuki</p>
+</div>
+</div>
+<!-- Visi Edukasi Pembelajaran -->
+<div class="bg-surface-container-low p-4 rounded-2xl space-y-1.5">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+<span class="font-label-md text-label-md">Visi Edukasi Digital</span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface italic pl-2">
+          “Mewujudkan pembelajaran Bahasa Indonesia yang asyik, kontekstual, dan memberdayakan untuk seluruh warga belajar Paket B di mana pun berada.”
+        </blockquote>
+</div>
+<!-- Statistik Pencapaian Media Edukasi -->
+<div class="grid grid-cols-3 gap-2 text-center pt-1">
+<div class="bg-surface-container p-2.5 rounded-xl">
+<span class="block font-headline-sm text-headline-sm text-primary">6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Modul Tematik</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-xl">
+<span class="block font-headline-sm text-headline-sm text-tertiary">30+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Misi Kuis</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-xl">
+<span class="block font-headline-sm text-headline-sm text-secondary-fixed-dim">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kurikulum B</span>
+</div>
+</div>
+</div>
+<!-- Informasi Lembaga PKBM Hasanah Marzuki -->
+<div class="bg-surface-container-lowest p-5 rounded-3xl shadow-md space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">PKBM Hasanah Marzuki</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pusat Kegiatan Belajar Masyarakat</p>
+</div>
+</div>
+<!-- Deskripsi Kurikulum Paket B -->
+<div class="space-y-2 text-on-surface-variant">
+<p class="font-body-sm text-body-sm">
+          Program Pendidikan Kesetaraan Paket B (setara SMP/MTs) dirancang guna memberikan ruang literasi bahasa, kemandirian berpikir kritis, dan kecakapan komunikasi modern berbasis kearifan lokal Nusantara.
+        </p>
+</div>
+<!-- Detail Layanan & Kontak -->
+<div class="flex items-center gap-2.5 p-2 bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Kontak: pkbm.hasanah@gmail.com</span>
+</div>
+<div class="flex items-center gap-2.5 p-2 bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Standar Kurikulum Merdeka Paket B</span>
+</div>
+</div>
+<!-- Buka Materi Belajar -->
+<a class="w-full py-3 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md active:translate-y-0.5 transition-all text-center" href="belajar.html">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span>Lihat Materi Belajar Bahasa</span>
+</a>
+</div>
+</div>
+<!-- Aksi Bawah: Balik ke Peta Petualangan -->
+<div class="pt-2">
+<a class="w-full py-3.5 px-4 rounded-2xl bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm hover:bg-surface-variant transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Kembali Menjelajah Peta Modul</span>
+</a>
+</div>
+</div>
+<script>
+  // ===== AVATAR PENGEMBANG (jika foto tidak ada) =====
+  function tampilkanAvatarPengembang() {
+    const img = document.getElementById('fotoPengembang');
+    if (!img) return;
+    const div = document.createElement('div');
+    div.className = 'w-full h-full rounded-xl bg-primary flex items-center justify-center';
+    div.innerHTML = '<span class="material-symbols-outlined text-on-primary text-[36px]" style="font-variation-settings: FILL 1;">person</span>';
+    img.replaceWith(div);
+  }
+
+  // ===== PAPAN PERINGKAT DARI LOCALSTORAGE (data hasil kuis nyata) =====
+  const BOARD_KEY = 'pkbm_leaderboard';
+
+  function getProfile() {
+    let profil = { name: 'Siswa', school: 'PKBM Hasanah Marzuki' };
+    try {
+      const p = JSON.parse(localStorage.getItem('petualangan_siswa_profile') || 'null');
+      if (p && p.name) profil = { name: p.name, school: p.school || 'PKBM Hasanah Marzuki' };
+    } catch (e) {}
+    return profil;
+  }
+
+  function getBoard() {
+    try { return JSON.parse(localStorage.getItem(BOARD_KEY) || '[]'); } catch (e) { return []; }
+  }
+
+  // Urutkan: nilai tertinggi duluan; nilai sama diurutkan abjad nama agar konsisten
+  function sortedBoard() {
+    return getBoard().slice().sort((a, b) => (b.score - a.score) || a.name.localeCompare(b.name, 'id'));
+  }
+
+  function initials(name) {
+    return name.trim().split(/\s+/).map(w => w[0]).join('').substring(0, 2).toUpperCase();
+  }
+
+  function renderLeaderboard() {
+    const board = sortedBoard();
+    const profil = getProfile();
+    const podium = document.getElementById('podiumGrid');
+    const listEl = document.getElementById('leaderboard-list');
+
+    // Cari posisi siswa yang sedang login
+    const myIndex = board.findIndex(x => x.name === profil.name);
+    const myEntry = myIndex !== -1 ? board[myIndex] : { name: profil.name, school: profil.school, score: 0 };
+
+    // ===== PODIUM TOP 3 =====
+    const medals = [
+      { rank: 2, balok: 'h-16 bg-surface-variant', nama: 'Perak', ikon: 'workspace_premium', kelas: 'text-outline', badge: 'bg-surface-variant text-on-surface' },
+      { rank: 1, balok: 'h-24 bg-secondary-container', nama: 'Emas', ikon: 'military_tech', kelas: 'text-on-secondary-container', badge: 'bg-secondary-container text-on-secondary-container' },
+      { rank: 3, balok: 'h-12 bg-tertiary-fixed', nama: 'Perunggu', ikon: 'military_tech', kelas: 'text-tertiary', badge: 'bg-tertiary-fixed-dim text-on-tertiary-fixed' }
+    ];
+    let podiumHtml = '';
+    medals.forEach(m => {
+      const e = board[m.rank - 1];
+      if (e) {
+        const isMe = e.name === profil.name;
+        podiumHtml += `
+        <div class="flex flex-col items-center ${m.rank === 1 ? '-mt-4' : ''}">
+          <div class="relative mb-1">
+            ${m.rank === 1 ? '<span class="material-symbols-outlined text-secondary-fixed-dim text-[26px] animate-bounce mb-0.5" style="font-variation-settings: \'FILL\' 1;">crown</span>' : ''}
+            <div class="w-14 h-14 rounded-full ${m.rank === 1 ? 'bg-secondary-container ring-4 ring-secondary-fixed/50' : m.rank === 2 ? 'bg-surface-container-highest' : 'bg-tertiary-fixed'} p-1 shadow-md flex items-center justify-center">
+              <span class="font-headline-sm text-headline-sm text-on-surface">${initials(e.name)}</span>
+            </div>
+            <span class="absolute -top-2 -right-1 ${m.badge} w-6 h-6 rounded-full flex items-center justify-center font-label-sm text-label-sm shadow-sm">${m.rank}</span>
+          </div>
+          <span class="font-label-sm text-label-sm text-on-surface truncate w-full text-center">${e.name}</span>
+          <span class="font-body-sm text-body-sm ${m.rank === 1 ? 'text-tertiary' : m.rank === 2 ? 'text-primary' : 'text-tertiary'} font-bold">${e.score} poin</span>
+          <!-- Balok Podium ${m.rank} -->
+          <div class="w-full ${m.balok} rounded-t-xl mt-2 flex flex-col items-center justify-center shadow-inner">
+            <span class="material-symbols-outlined ${m.kelas} text-[22px]" style="font-variation-settings: 'FILL' 1;">${m.ikon}</span>
+            <span class="font-label-sm text-label-sm ${m.kelas.replace('text-outline','text-on-surface-variant').replace('text-on-secondary-container','text-on-secondary-container').replace('text-tertiary','text-on-tertiary-fixed-variant')}">${m.nama}</span>
+          </div>
+        </div>`;
+      } else {
+        podiumHtml += `
+        <div class="flex flex-col items-center">
+          <div class="w-14 h-14 rounded-full bg-surface-container-high p-1 shadow-md flex items-center justify-center mb-1">
+            <span class="font-headline-sm text-headline-sm text-outline">-</span>
+          </div>
+          <span class="font-label-sm text-label-sm text-outline">Belum ada</span>
+          <div class="w-full h-8 bg-surface-container-high rounded-t-xl mt-2"></div>
+        </div>`;
+      }
+    });
+    podium.innerHTML = podiumHtml;
+
+    // ===== KARTU SISWA LOGIN =====
+    document.getElementById('playerRank').textContent = myIndex !== -1 ? '#' + (myIndex + 1) : '-';
+    document.getElementById('playerName').textContent = profil.name;
+    document.getElementById('playerSchool').textContent = profil.school;
+    document.getElementById('player-score-display').textContent = myEntry.score;
+
+    // ===== DAFTAR RANKING =====
+    if (board.length === 0) {
+      listEl.innerHTML = `
+        <div class="flex flex-col items-center gap-2 p-6 text-center">
+          <span class="material-symbols-outlined text-outline text-[40px]">military_tech</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Belum ada nilai. Mainkan kuis untuk menjadi yang pertama!</p>
+          <a href="bermain.html" class="text-primary font-label-md text-label-md flex items-center gap-1">Mulai Kuis <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+        </div>`;
+      return;
+    }
+
+    let html = '';
+    board.forEach((e, i) => {
+      const isMe = e.name === profil.name;
+      html += isMe
+        ? `
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-primary-fixed text-on-primary-fixed shadow-sm">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-6 text-center font-headline-sm text-headline-sm text-primary">${i + 1}</span>
+            <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">${initials(e.name)}</div>
+            <div class="min-w-0">
+              <p class="font-label-md text-label-md text-on-primary-fixed font-bold truncate">${e.name} (Anda)</p>
+              <p class="font-body-sm text-body-sm text-on-primary-fixed-variant truncate">${e.school || ''}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 font-headline-sm text-headline-sm text-primary shrink-0">
+            <span>${e.score}</span>
+            <span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">stars</span>
+          </div>
+        </div>`
+        : `
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-6 text-center font-label-md text-label-md text-outline">${i + 1}</span>
+            <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">${initials(e.name)}</div>
+            <div class="min-w-0">
+              <p class="font-label-md text-label-md text-on-surface truncate">${e.name}</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant truncate">${e.school || ''}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 font-label-md text-label-md text-primary shrink-0">
+            <span>${e.score}</span>
+            <span class="material-symbols-outlined text-[16px] text-secondary-fixed-dim">stars</span>
+          </div>
+        </div>`;
+    });
+    listEl.innerHTML = html;
+  }
+
+  function refreshLeaderboard() {
+    renderLeaderboard();
+  }
+
+  // Penggantian Tab
+  function switchTab(tab) {
+    const secLeaderboard = document.getElementById('section-leaderboard');
+    const secDeveloper = document.getElementById('section-developer');
+    const btnLeaderboard = document.getElementById('btn-tab-leaderboard');
+    const btnDeveloper = document.getElementById('btn-tab-developer');
+
+    if (tab === 'leaderboard') {
+      secLeaderboard.classList.remove('hidden');
+      secLeaderboard.classList.add('flex');
+      secDeveloper.classList.add('hidden');
+      secDeveloper.classList.remove('flex');
+
+      btnLeaderboard.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md transition-all duration-200";
+      btnDeveloper.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all duration-200";
+    } else {
+      secLeaderboard.classList.add('hidden');
+      secLeaderboard.classList.remove('flex');
+      secDeveloper.classList.remove('hidden');
+      secDeveloper.classList.add('flex');
+
+      btnDeveloper.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-md transition-all duration-200";
+      btnLeaderboard.className = "flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all duration-200";
+    }
+  }
+
+  // Filter Waktu Sederhana
+  function filterTime(type) {
+    const btnAll = document.getElementById('btn-filter-all');
+    const btnWeek = document.getElementById('btn-filter-week');
+
+    if (type === 'all') {
+      btnAll.className = "px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-transform active:scale-95";
+      btnWeek.className = "px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all";
+    } else {
+      btnWeek.className = "px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-transform active:scale-95";
+      btnAll.className = "px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all";
+    }
+  }
+
+  function refreshLeaderboard() {
+    renderLeaderboard();
+  }
+
+  // Jalankan saat load
+  document.addEventListener('DOMContentLoaded', function() {
+    renderLeaderboard();
+    // Jika dibuka dengan hash #developer dari dashboard, langsung tampilkan tab pengembang
+    if (window.location.hash === '#developer') {
+      switchTab('developer');
+    }
+  });
+</script>
+</main>
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md scale-105">
+<div class="flex justify-around items-center h-20 px-space-xs">
+<a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-all hover:text-on-surface" data-path="beranda-petualangan" href="dashboard.html">
+<span class="material-symbols-outlined text-[24px]">map</span>
+<span class="font-label-sm text-label-sm">Peta</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-all hover:text-on-surface" data-path="misi-modul" href="dashboard.html">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+<span class="font-label-sm text-label-sm">Modul</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-all hover:text-on-surface" data-path="arena-tanding" href="dashboard.html">
+<span class="material-symbols-outlined text-[24px]">swords</span>
+<span class="font-label-sm text-label-sm">Tanding</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-all text-primary font-label-md scale-105" data-path="papan-peringkat" href="peringkat-pengembang.html">
+<span class="material-symbols-outlined text-[24px]">military_tech</span>
+<span class="font-label-sm text-label-sm">Juara</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-all hover:text-on-surface" data-path="profil-pelajar" href="identitas.html">
+<span class="material-symbols-outlined text-[24px]">account_circle</span>
+<span class="font-label-sm text-label-sm">Siswa</span>
+</a>
+</div>
+</nav>
+</body>
+</html>
